@@ -3,7 +3,17 @@
 <mapper namespace="com.atguigu.mybatis.mapper.UserMapper">
     <!--int insertUser();-->
 
-    <insert id="insertUser"> insert into t_user values(null,'admin','123456',23,'男','12345@qq.com') </insert>
+    <insert id="insertUser"> insert into t_user values('3','admin','123456',23,'男','12345@qq.com') </insert>
+    <update id="updateUser">update t_user set usernme='root' ,passward='123' where id =3 </update>
+    <delete id="deleteUser">delete from t_user  where id is null</delete>
+<!--    需要设置类型，数据结果查看test测试-->
+    <select id="getUserById" resultType="com.atguigu.mybatis.pojo.User">
+        select * from t_user where usernme = 'root'
+    </select>
+    <select id="getAllUser" resultType="com.atguigu.mybatis.pojo.User">
+        select * from t_user
+    </select>
+
 </mapper>
 
 

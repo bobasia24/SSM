@@ -10,7 +10,7 @@
     <select id="getUserById" resultType="com.atguigu.mybatis.pojo.User">
         select * from t_user where usernme = 'root'
     </select>
-    <select id="getAllUser" resultType="com.atguigu.mybatis.pojo.User">
+    <select id="getAllUser" resultType="User">
         select * from t_user
     </select>
 

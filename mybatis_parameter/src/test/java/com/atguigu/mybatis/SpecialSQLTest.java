@@ -38,4 +38,14 @@ public class SpecialSQLTest {
         System.out.println(t_user);
 
     }
+
+    @Test
+    public void testinsertUser() {
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        SpecialSQLMapper mapper = sqlSession.getMapper(SpecialSQLMapper.class);
+        User user = new User(null, "lili", "123", 31, "女", "12345@qq.com");
+        mapper.insertUser(user);
+        System.out.println(user);
+
+    }
 }

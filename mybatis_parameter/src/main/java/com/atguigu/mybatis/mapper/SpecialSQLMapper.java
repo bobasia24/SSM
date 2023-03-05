@@ -12,4 +12,6 @@ public interface SpecialSQLMapper {
     void deleteMore(@Param("ids") String ids);
 
     List<User>  getUserByTable(@Param("tablename") String tablename);
+
+    void insertUser(User user);
 }

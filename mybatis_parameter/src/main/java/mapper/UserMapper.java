@@ -28,10 +28,14 @@ import java.util.Map;
  * 只需要通过#{}和${}访问map集合的键，就可以获取相对应的值,一定要注意${}的单引号问题
  */
 public interface UserMapper {
-
+//    参数为单个的字面量类型
 User getUserByUserName (String username);
+//    参数为多个的字面量类型
 User checkLogin(String username ,String password,String gender);
+//    参数为map集合类型的参数
 User checkLoginBymap(Map<String ,Object> map);
+//    参数为实体类类型的参数
 void insertUser(User user);
+//使用@Param()注解标识参数
 User checkLoginByParam(@Param("username") String username, @Param("password") String password);
 }

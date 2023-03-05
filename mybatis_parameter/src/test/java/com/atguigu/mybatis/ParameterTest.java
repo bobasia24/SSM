@@ -1,6 +1,6 @@
 package com.atguigu.mybatis;
 
-import mapper.UserMapper;
+import com.atguigu.mybatis.mapper.UserMapper;
 import com.atguigu.mybatis.pojo.User;
 import com.atguigu.mybatis.utils.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class MyBatisTest {
+public class ParameterTest {
 
     @Test
     public void testgetUserByUserName() {

@@ -35,4 +35,5 @@ public class Dept {
         this.deptId = deptId;
         this.deptName = deptName;
     }
+
 }

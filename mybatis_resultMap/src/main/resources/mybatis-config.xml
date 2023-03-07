@@ -13,7 +13,12 @@
     <properties resource="jdbc.properties"/>
 
     <settings>
+        <!--将下划线映射为驼峰-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--开启延迟加载，需要和按需加载一起使用才有作用-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--false按需加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
     </settings>
 
     <typeAliases>

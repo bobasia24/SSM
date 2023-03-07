@@ -75,7 +75,7 @@
         <association property="dept"
                      select="com.atguigu.mybatis.mapper.DeptMapper.getEmpAndDeptByStepTwo"
                      column="dept_id">
-
+<!--column的值是从第一个查询中拿，column字段就是关联条件-->
         </association>
     </resultMap>
 

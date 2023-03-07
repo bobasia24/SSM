@@ -38,4 +38,15 @@ public class ResultMapTest {
 
     }
 
+    @Test
+    public void testgetEmpAndDeptByStepOne1(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        Emp empAndDeptByStepOne = mapper.getEmpAndDeptByStepOne(2);
+        System.out.println(empAndDeptByStepOne.getEmpName());
+        //懒加载，不执行第二个查询语句
+
+
+    }
+
 }

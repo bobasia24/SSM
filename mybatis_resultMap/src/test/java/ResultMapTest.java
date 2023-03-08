@@ -49,4 +49,29 @@ public class ResultMapTest {
 
     }
 
+
+    //获取一个部门中的员工
+    @Test
+    public void testgetDeptAndEmp(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
+        Dept empAndDeptByStepOne = mapper.getDeptAndEmp(2);
+        System.out.println(empAndDeptByStepOne);
+        //懒加载，不执行第二个查询语句
+
+
+    }
+
+
+    //获取一个部门中的员工
+    @Test
+    public void testgetDeptAndEmpByStepOne(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
+        Dept empAndDeptByStepOne = mapper.getDeptAndEmpByStepOne(2);
+        System.out.println(empAndDeptByStepOne);
+        //懒加载，不执行第二个查询语句
+
+
+    }
 }

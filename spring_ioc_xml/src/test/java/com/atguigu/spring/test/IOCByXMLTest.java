@@ -48,10 +48,18 @@ public class IOCByXMLTest {
     }
 
     @Test
-//    测试依赖注入，为构造器赋值
+//    测试依赖注入，赋值NULL值
     public void testNull(){
         ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring-ioc.xml");
-        Student bean = ioc.getBean("studengFour", Student.class);
+        Student bean = ioc.getBean("studentFour", Student.class);
+        System.out.println(bean);
+    }
+
+    @Test
+//    测试依赖注入，为数组及class类赋值
+    public void testClazzAndArray(){
+        ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring-ioc.xml");
+        Student bean = ioc.getBean("studentFive", Student.class);
         System.out.println(bean);
     }
 }

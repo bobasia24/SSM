@@ -8,7 +8,7 @@ import java.util.Map;
  * Author:ybc
  * Description:
  */
-public class Student {
+public class Student   {
 
     private Integer sid;
 
@@ -17,14 +17,30 @@ public class Student {
     private Integer age;
 
     private String gender;
-    private double sorce;
 
-    public double getSorce() {
-        return sorce;
+    private Double score;
+
+    private String[] hobby;
+
+    private Clazz clazz;
+
+//    private Map<String, Teacher> teacherMap;
+
+    public Student() {
     }
 
-    public void setSorce(double sorce) {
-        this.sorce = sorce;
+    public Student(Integer sid, String sname, String gender, Integer age) {
+        this.sid = sid;
+        this.sname = sname;
+        this.gender = gender;
+        this.age = age;
+    }
+
+    public Student(Integer sid, String sname, String gender, Double score) {
+        this.sid = sid;
+        this.sname = sname;
+        this.gender = gender;
+        this.score = score;
     }
 
     public Integer getSid() {
@@ -59,24 +75,37 @@ public class Student {
         this.gender = gender;
     }
 
-    public Student() {
+    public Double getScore() {
+        return score;
     }
 
-    public Student(Integer sid, String sname, double sorce,String gender ) {
-        this.sid = sid;
-        this.sname = sname;
-        this.gender = gender;
-        this.sorce = sorce;
+    public void setScore(Double score) {
+        this.score = score;
     }
 
-    public Student(Integer sid, String sname, Integer age, String gender) {
-        this.sid = sid;
-        this.sname = sname;
-        this.age = age;
-        this.gender = gender;
+    public String[] getHobby() {
+        return hobby;
     }
 
+    public void setHobby(String[] hobby) {
+        this.hobby = hobby;
+    }
 
+    public Clazz getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Clazz clazz) {
+        this.clazz = clazz;
+    }
+
+//    public Map<String, Teacher> getTeacherMap() {
+//        return teacherMap;
+//    }
+
+//    public void setTeacherMap(Map<String, Teacher> teacherMap) {
+//        this.teacherMap = teacherMap;
+//    }
 
     @Override
     public String toString() {
@@ -85,7 +114,9 @@ public class Student {
                 ", sname='" + sname + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
-                ", sorce=" + sorce +
+                ", score=" + score +
+                ", hobby=" + Arrays.toString(hobby) +
+                ", clazz=" + clazz +
                 '}';
     }
 }

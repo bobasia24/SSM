@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+<bean id="studentOne" class="com.atguigu.spring.pojo.Student"></bean>
+    <bean id="studentTwo"  class="com.atguigu.spring.pojo.Student">
+
+        <!--
+     property：通过成员变量的set方法进行赋值
+     name：指定属性名（这个属性名是getXxx()、setXxx()方法定义的，和成员变量无关
+     value：设置为属性所赋的值
+ -->
+        <property name="sid" value="1001"></property>
+        <property name="sname" value="张三"></property>
+        <property name="age" value="23"></property>
+        <property name="gender" value="男"></property>
+
+    </bean>
+<!--    只有一个有参构造，直接value赋值-->
+    <bean id="studentThree" class="com.atguigu.spring.pojo.Student">
+        <constructor-arg value="1002"></constructor-arg>
+        <constructor-arg value="李四"></constructor-arg>
+        <constructor-arg value="22" name="age"></constructor-arg>
+        <constructor-arg value="女"></constructor-arg>
+    </bean>
+
+    <bean id="studengFour" class="com.atguigu.spring.pojo.Student">
+        <property name="sname" value="王五"></property>
+        <property name="age" value="22"></property>
+        <property name="gender" ><null></null></property>
+    </bean>
+
+</beans>

@@ -57,7 +57,7 @@ public class IOCByXMLTest {
 
     @Test
 //    测试依赖注入，为数组及class类赋值
-    public void testClazzAndArray(){
+    public void testClazzAndArrayAndListAndMap(){
         ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring-ioc.xml");
         Student bean = ioc.getBean("studentFive", Student.class);
         System.out.println(bean);

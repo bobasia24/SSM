@@ -44,10 +44,42 @@
                 <value>喝酒</value>
             </array>
         </property>
-
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>10010</value>
+                    </key>
+                    <ref bean="teacherOne"></ref>
+                </entry>
+                <entry>
+                    <key>
+                        <value>10086</value>
+                    </key>
+                    <ref bean="teacherTwo"></ref>
+                </entry>
+            </map>
+        </property>
     </bean>
     <bean id="clazzOne" class="com.atguigu.spring.pojo.Clazz">
         <property name="cid" value="111"></property>
         <property name="cname" value="哈哈哈"></property>
+        <property name="students">
+            <list>
+                <ref bean="studentOne"></ref>
+                <ref bean="studentThree"></ref>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="teacherOne" class="com.atguigu.spring.pojo.Teacher">
+        <property name="tid" value="10010"></property>
+        <property name="tname" value="大宝"></property>
+    </bean>
+
+    <bean id="teacherTwo" class="com.atguigu.spring.pojo.Teacher">
+        <property name="tid" value="10086"></property>
+        <property name="tname" value="二宝"></property>
     </bean>
 </beans>

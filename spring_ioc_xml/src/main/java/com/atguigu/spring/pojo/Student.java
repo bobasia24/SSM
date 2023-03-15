@@ -8,7 +8,7 @@ import java.util.Map;
  * Author:ybc
  * Description:
  */
-public class Student   {
+public class Student implements Person {
 
     private Integer sid;
 
@@ -24,7 +24,7 @@ public class Student   {
 
     private Clazz clazz;
 
-//    private Map<String, Teacher> teacherMap;
+    private Map<String, Teacher> teacherMap;
 
     public Student() {
     }
@@ -99,13 +99,13 @@ public class Student   {
         this.clazz = clazz;
     }
 
-//    public Map<String, Teacher> getTeacherMap() {
-//        return teacherMap;
-//    }
+    public Map<String, Teacher> getTeacherMap() {
+        return teacherMap;
+    }
 
-//    public void setTeacherMap(Map<String, Teacher> teacherMap) {
-//        this.teacherMap = teacherMap;
-//    }
+    public void setTeacherMap(Map<String, Teacher> teacherMap) {
+        this.teacherMap = teacherMap;
+    }
 
     @Override
     public String toString() {
@@ -117,6 +117,7 @@ public class Student   {
                 ", score=" + score +
                 ", hobby=" + Arrays.toString(hobby) +
                 ", clazz=" + clazz +
+                ", teacherMap=" + teacherMap +
                 '}';
     }
 }
